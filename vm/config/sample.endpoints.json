@@ -1,0 +1,8 @@
+{
+    "metrics": {
+        "url": "http://load-balancer:9009/api/v1/push"
+    },
+    "logs": {
+        "url": "http://loki:3100/loki/api/v1/push"
+    }
+}
