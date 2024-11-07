@@ -1,7 +1,7 @@
 #!/bin/bash
 
 CLUSTER_NAME="<CLUSTER_NAME>"
-PROMETHEUS_HOST="http://<PROMETHEUS_IP>:9090"
+PROMETHEUS_HOST="http://<PROMETHEUS_IP>:9009"
 LOKI_HOST="http://<LOKI_IP>:3100"
 
 helm repo add grafana https://grafana.github.io/helm-charts
