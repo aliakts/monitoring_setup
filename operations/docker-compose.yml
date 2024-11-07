@@ -38,6 +38,7 @@ services:
   grafana:
     image: grafana/grafana:latest
     container_name: grafana
+    user: root
     pull_policy: always
     environment:
       - GF_USERS_DEFAULT_THEME=${GF_USERS_DEFAULT_THEME}
@@ -69,6 +70,7 @@ services:
     volumes:
       - ./config/grafana-provisioning-dashboards.yaml:/etc/grafana/provisioning/dashboards/provisioning-dashboards.yaml:ro
       - ./config/grafana-provisioning-datasources.yaml:/etc/grafana/provisioning/datasources/provisioning-datasources.yaml:ro
+      - /mnt/data/opsdata/grafana:/var/lib/grafana
 
       - ./dashboards/mimir-alertmanager.json:/var/lib/grafana/dashboards/mimir-alertmanager.json:ro
       - ./dashboards/mimir-compactor.json:/var/lib/grafana/dashboards/mimir-compactor.json:ro
