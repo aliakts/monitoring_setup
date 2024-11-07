@@ -64,6 +64,7 @@ services:
       - GF_AUTH_GOOGLE_TOKEN_URL=${GF_AUTH_GOOGLE_TOKEN_URL}
       - GF_AUTH_GOOGLE_API_URL=${GF_AUTH_GOOGLE_API_URL}
       - GF_AUTH_GOOGLE_HOSTED_DOMAIN=${GF_AUTH_GOOGLE_HOSTED_DOMAIN}
+      - GF_AUTH_GOOGLE_ALLOWED_DOMAINS=${GF_AUTH_GOOGLE_ALLOWED_DOMAINS}
       - GF_AUTH_GOOGLE_ALLOW_SIGN_UP=${GF_AUTH_GOOGLE_ALLOW_SIGN_UP}
     volumes:
       - ./config/grafana-provisioning-dashboards.yaml:/etc/grafana/provisioning/dashboards/provisioning-dashboards.yaml:ro
